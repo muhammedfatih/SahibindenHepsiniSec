@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "Sahibinden Hepsini Seç",
+    "description": "Sahibinden sitesinde bir şeyleri hariçte bırakılabilmesi için başta her şeyin seçilmesi icap etmekte.",
+    "version": "1.0.0",
+    "author": "Muhammed Fatih İNANÇ",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["jquery-3.3.1.js", "content.js"]
+      }
+    ],
+    "icons": {
+      "16": "images/get_started16.png",
+      "32": "images/get_started32.png",
+      "64": "images/get_started64.png",
+      "128": "images/get_started128.png"
+    },
+    "permissions": ["storage","activeTab","declarativeContent"],
+    "page_action": {
+      "default_title": "Aktive et",
+      "default_popup": "index.html"
+    }
+}
